@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Tomato Leaf Disease Detector</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+        <img class="icon" src="../static/assets/happy.png">
+      <h1>Tomato Leaf Disease Detector</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href=".">Home</a></li>
+        <li><a href="/contacts">Contact</a></li>
+        <li><a href="/service">Our services</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <main class="content-container">
+      <section class="about-section">
+        <p>
+          The <strong>Tomato Leaf Disease Detector</strong> is an AI-powered web
+          application designed to help farmers and gardeners identify common
+          diseases affecting tomato plants by analyzing leaf images.
+        </p>
+        <p>
+          Using a trained deep learning model, the application predicts the type
+          of disease present on the leaf and provides information about the
+          cause and prevention methods to help users take timely action.
+        </p>
+        <p>
+          This tool aims to improve crop health and yield by enabling early
+          detection and management of tomato leaf diseases.
+        </p>
+      </section>
+    </main>
+     <div 
+    class="footer">&copy; 2025 Tomato AI | Built by Gomezgani Mlowoka
+    </div>
+    <script src="{{ url_for('static', filename='js/darkmode-toggle.js') }}"></script>
+  </body>
+</html>

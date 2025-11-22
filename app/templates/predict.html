@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predict Tomato Leaf Disease</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <img class="icon" src="../static/assets/happy.png">
+      <h1>Tomato Leaf Disease Detector</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href=".">Home</a></li>
+        <li><a href="/contacts">Contact</a></li>
+        <li><a href="/service">Our services</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="upload-section">
+      <h2>Upload a Leaf Image for Prediction</h2>
+      <p>Select a clear image of a tomato leaf to detect disease.</p>
+      <form
+        id="upload-form"
+        method="POST"
+        action="/predict"
+        enctype="multipart/form-data"
+      >
+        <input type="file" name="file" id="file-input" required />
+        <br /><br />
+        <button type="submit">Predict</button>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+
+    <div class="footer">&copy; 2025 Tomato AI | Built by Gomezgani Mlowoka</div>
+
+    <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+  </body>
+</html>

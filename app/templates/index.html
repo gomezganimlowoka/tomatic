@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tomato Leaf Disease Detector</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <img class="icon" src="../static/assets/happy.png">
+      <h1>Tomato Leaf Disease Detector</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href=".">Home</a></li>
+        <li><a href="/contacts">Contact</a></li>
+        <li><a href="/service">Our services</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="upload-section">
+      <h2>Upload a Leaf Image to Detect Disease</h2>
+      <p>
+        Our advanced AI uses deep learning to examine your tomato leaves 
+        and identify 10 major diseases, giving you quick, reliable insights 
+        to protect and boost your farm’s productivity.
+      </p>
+      <a href="/predict_page"><button>Get Started</button> </a>
+    </div>
+
+    <div class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h2>1</h2>
+          <h3>Upload Image</h3>
+          <p>Select a clear, well-lit image of a tomato leaf. 
+            Make sure the leaf is fully visible, sharp, and 
+            not covered by shadows or other objects.</p>
+        </div>
+        <div class="step">
+          <h2>2</h2>
+          <h3>AI Analysis</h3>
+          <p>Our model analyzes the leaf using deep learning, 
+            so avoid blurry images, shadows, or obstructions for the best results.</p>
+        </div>
+        <div class="step">
+          <h2>3</h2>
+          <h3>Get Result</h3>
+          <p>See the predicted disease and possible solutions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div 
+    class="footer">&copy; 2025 Tomato AI | Built by Gomezgani Mlowoka
+    </div>
+  </body>
+</html>
