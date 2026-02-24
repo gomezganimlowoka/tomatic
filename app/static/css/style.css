@@ -1,17 +1,18 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #e7e6e6;
   color: #1a1a1a;
 }
 
 
 nav {
-  background-color: #e3f5e9;
-  display: flex;
-  justify-content: right;
-  padding: 12px 0;
+  background-color: #f0f5f2;
+  display:flex;
+  justify-content:center;
+  padding: 5px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  width: 100%;
   
 }
 nav ul {
@@ -19,7 +20,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 nav ul li {
   display: inline;
@@ -27,55 +28,84 @@ nav ul li {
 nav ul li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-weight: bold;
+  font-weight:lighter;
   font-size: 16px;
   padding: 8px 12px;
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
 nav ul li a:hover {
-  background-color: #a7eeb8;
-  text-decoration: dotted underline;
-}
-nav ul li a:current {
-  background-color: #c6560f;
-  color: #15d315;
-  text-decoration: dotted underline;
+  background-color: #daeedf;
 }
 .upload-section {
-  background-color: #dff0e0;
+  background: rgb(236, 236, 236);
   margin: 30px auto;
   max-width: 600px;
   border-radius: 16px;
   padding: 30px;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .upload-section h2 {
-  color: #205c3b;
+  color: #e4a9a9;
   font-size: 24px;
+  letter-spacing: 5px;
 }
 .upload-section p {
   font-size: 16px;
   margin: 16px 0 24px;
+  letter-spacing: 2px;
 }
-.upload-section button {
-  background-color: #80e1ab;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-.upload-section button:hover {
-  background-color: #4bec93;
-  color: white;
-  padding: 15px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+/* From Uiverse.io by cssbuttons-io */ 
+.btn {
+  position: relative;
   font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
 }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
 .how-it-works {
   text-align: center;
   padding: 40px 20px;
