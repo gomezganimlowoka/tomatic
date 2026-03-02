@@ -9,9 +9,10 @@
 </head>
 
 <body>
-    <header>
-        
-    </header>
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background-color: #ec8a88; /* tomato red */ color: #ffffff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);">
+        <h4 style=" margin: 0; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.5px;">Tomatoic</h4>
+        <img style="width: 36px; height: 36px; object-fit: contain;border-radius: 50%; cursor: pointer;" src="../static/assets/happy.png" alt="Icon" />
+    </div>
     <nav>
         <ul>
             <li><a href=".">Home</a></li>
@@ -23,7 +24,7 @@
     {% block content%}
 
     {% endblock %}
-    <div class="footer">&copy; 2025 Tomato AI | Built by Gomezgani Mlowoka
+    <div class="footer">&copy; 2025 Tomatic | Built by Gomezgani Mlowoka
     </div>
     <script src="{{ url_for('static', filename='js/darkmode-toggle.js') }}"></script>
 

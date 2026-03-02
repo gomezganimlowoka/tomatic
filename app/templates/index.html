@@ -1,42 +1,39 @@
 {% extends 'base.html' %}
-{% block title %}Home{% endblock  %}
-  {% block content %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="how-it-works">
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="card">
+      <h2>1</h2>
+      <h3>Upload Image</h3>
+      <p>Select a clear image of a tomato leaf.
+        Make sure the leaf is fully visible, sharp, and
+        not covered by shadows or other objects.</p>
+    </div>
+    <div class="card">
+      <h2>2</h2>
+      <h3>AI Analysis</h3>
+      <p>Our model analyzes the leaf using deep learning,
+        so avoid blurry images, shadows, or obstructions for the best results.</p>
+    </div>
     
-    <div class="upload-section">
-      <h2>Upload a Tomato Leaf Image to Detect Disease</h2>
-      <p>
-        Our advanced AI uses deep learning to examine your tomato leaves 
-        and identify 10 major diseases, giving you quick, reliable insights 
-        to protect and boost your farm’s productivity.
-      </p>
-      <a href="/predict_page"><button class="btn">Get Started</button> </a>
+    <div class="card">
+      <h2>3</h2>
+      <h3>Get Result</h3>
+      <p>See the predicted disease and possible solutions.</p>
     </div>
+  </div>
+</div>
 
-    <div class="how-it-works">
-      <h2>How It Works</h2>
-      <div class="steps">
-        <div class="step">
-          <h2>1</h2>
-          <h3>Upload Image</h3>
-          <p>Select a clear image of a tomato leaf. 
-            Make sure the leaf is fully visible, sharp, and 
-            not covered by shadows or other objects.</p>
-        </div>
-        <div class="step">
-          <h2>2</h2>
-          <h3>AI Analysis</h3>
-          <p>Our model analyzes the leaf using deep learning, 
-            so avoid blurry images, shadows, or obstructions for the best results.</p>
-        </div>
-        <div class="step">
-          <h2>3</h2>
-          <h3>Get Result</h3>
-          <p>See the predicted disease and possible solutions.</p>
-        </div>
-      </div>
-    </div>
+<div class="upload-section">
+  <h2>Upload a Tomato Leaf Image to Detect Disease</h2>
+  <p>
+    Our advanced AI uses deep learning to examine your tomato leaves
+    and identify 10 major diseases, giving you quick, reliable insights
+    to protect and boost your farm’s productivity.
+  </p>
+  <a href="/predict_page"><button class="btn">Get Started</button> </a>
+</div>
 
-{% endblock  %}  
-
-
-
+{% endblock %}
