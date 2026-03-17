@@ -3,20 +3,16 @@
 {%block title%}Make Prediction{%endblock%}
 
 {%block content%}
-    <div class="upload-section">
-      <h2>Upload a Leaf Image for Prediction</h2>
-      <p>Select a clear image of a tomato leaf to detect disease.</p>
-      <form
-        id="upload-form"
-        method="POST"
-        action="/predict"
-        enctype="multipart/form-data"
-      >
-        <input type="file" name="file" id="file-input" required />
-        <br /><br />
-        <button type="submit">Predict</button>
-      </form>
-      <div class="result" id="result"></div>
-    </div>
+<div class="upload-section">
+  <h2>Upload a Leaf Image for Prediction</h2>
+  <p>Select a clear image of a tomato leaf to detect disease.</p>
+  <form id="upload-form" method="POST" action="/predict" enctype="multipart/form-data">
+    <input type="file" name="file" id="file-input" required />
+    <br /><br />
+    <a href="/predict_page"><button class="btn" style="letter-spacing: 2px;">Predict</button> </a>
+
+  </form>
+  <div class="result" id="result"></div>
+</div>
 
 {%endblock%}
