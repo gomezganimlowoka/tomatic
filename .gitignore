@@ -1,4 +1,5 @@
 # virtual environment
 .env
 .vscode
+.tomatic
 __pycache__
