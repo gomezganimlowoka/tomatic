@@ -1,27 +1,83 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #e7e6e6;
-  color: #1a1a1a;
-}
-.header{
-  display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    background-color: #b3f1bd; /* tomato red */
-    color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 0;
 }
 
-.header h4 {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    Arial,
+    sans-serif;
+  background: #f7faf8;
+  color: #1a1a1a;
 }
-/* From Uiverse.io by Yaya12085 */ 
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5ede8;
+}
+.header h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #27500a;
+  margin: 0;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ===== NAV ===== */
+nav {
+  background: #ffffff;
+  border-bottom: 1px solid #e5ede8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 56px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+nav ul li a {
+  font-size: 13px;
+  color: #5f5e5a;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  white-space: nowrap;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background: #eaf3de;
+  color: #3b6d11;
+  font-weight: 500;
+}
+
+/* From Uiverse.io by Yaya12085 */
 .custum-file-upload {
   height: 40%;
   width: 40%;
@@ -36,7 +92,7 @@ body {
   background-color: rgba(255, 255, 255, 1);
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+  box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
 }
 
 .custum-file-upload .icon {
@@ -65,44 +121,6 @@ body {
   display: none;
 }
 
-.header .icon {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    cursor: pointer;
-}
-
-nav {
-  background-color: #f0f5f2;
-  display:flex;
-  justify-content:center;
-  padding: 5px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  width: 100%;
-  
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-nav ul li {
-  display: inline;
-}
-nav ul li a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-weight:lighter;
-  font-size: 16px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-nav ul li a:hover {
-  background-color: #daeedf;
-}
 .upload-section {
   background: rgb(236, 236, 236);
   margin: 30px auto;
@@ -110,7 +128,10 @@ nav ul li a:hover {
   border-radius: 16px;
   padding: 30px;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .upload-section h2 {
   color: #e4a9a9;
@@ -122,7 +143,7 @@ nav ul li a:hover {
   margin: 16px 0 24px;
   letter-spacing: 2px;
 }
-/* From Uiverse.io by cssbuttons-io */ 
+/* From Uiverse.io by cssbuttons-io */
 .btn {
   position: relative;
   font-size: 17px;
@@ -184,28 +205,82 @@ nav ul li a:hover {
 .steps {
   display: flex;
   justify-content: center;
-  gap: 2px;
+  gap: 16px;
   flex-wrap: wrap;
-}
-.card {
   padding: 20px;
-  width: 20%;
-  background: rgb(236, 236, 236);
-  margin: 30px auto;
+}
+
+.card {
+  padding: 24px 20px;
+  width: clamp(200px, 22%, 300px);
+  background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+  margin: 16px auto;
   border-radius: 16px;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  flex: 1 1 200px; /* grow, shrink, base width */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    rgba(0, 0, 0, 0.5) 0px 6px 12px,
+    rgba(0, 0, 0, 0.3) 0px 10px 20px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .card h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  letter-spacing: 5px;
+  font-size: clamp(16px, 2vw, 20px);
+  margin-bottom: 10px;
+  letter-spacing: 3px;
 }
+
 .card p {
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vw, 14px);
   margin: 0;
-  letter-spacing:2px
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .card {
+    width: clamp(160px, 40%, 280px);
+    flex: 1 1 160px;
+    padding: 20px 16px;
+  }
+
+  .card h3 {
+    letter-spacing: 2px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .steps {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .card {
+    width: 100%;
+    flex: 1 1 100%;
+    margin: 8px auto;
+  }
+
+  .card h3 {
+    letter-spacing: 1px;
+  }
+
+  .card p {
+    letter-spacing: 1px;
+  }
 }
 .result {
   margin-top: 20px;
