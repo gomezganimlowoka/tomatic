@@ -263,6 +263,7 @@ nav ul li a.active {
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 500;
+  border-color: black;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   padding: 12px 36px;
