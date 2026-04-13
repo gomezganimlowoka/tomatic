@@ -1,6 +1,134 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
 {% block content %}
+<section class="hero">
+ 
+  <div class="slides">
+    <div class="slide slide-1 active"></div>
+    <div class="slide slide-2"></div>
+    <div class="slide slide-3"></div>
+    <div class="slide slide-4"></div>
+  </div>
+ 
+  <div class="orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+ 
+  <div id="sparkles"></div>
+ 
+  <div class="hero-inner">
+ 
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="badge">
+        <span class="badge-pulse"></span>
+        AI-Powered Plant Health
+      </div>
+ 
+      <h1 class="hero-title">
+        Detect Tomato<br/>
+        <span class="red">Disease</span> Before<br/>
+        It <em>Spreads</em> — with<br/>
+        <span class="green">AI Precision</span>
+      </h1>
+ 
+      <p class="hero-desc">
+        Upload a photo of your tomato plant and our deep learning model
+        identifies diseases instantly — from early blight to late blight,
+        leaf mold, and 12 more — with treatment recommendations in seconds.
+      </p>
+ 
+      <div class="disease-row">
+        <div class="disease-pill pill-red"><div class="pill-dot"></div> Early Blight</div>
+        <div class="disease-pill pill-red"><div class="pill-dot"></div> Late Blight</div>
+        <div class="disease-pill pill-amber"><div class="pill-dot"></div> Leaf Mold</div>
+        <div class="disease-pill pill-amber"><div class="pill-dot"></div> Septoria Spot</div>
+        <div class="disease-pill pill-green"><div class="pill-dot"></div> Healthy ✓</div>
+      </div>
+ 
+      <div class="hero-actions">
+        <button class="btn-primary">🔬 Scan Your Plant</button>
+        <button class="btn-secondary">Watch Demo →</button>
+      </div>
+ 
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-value">97<span>%</span></div>
+          <div class="stat-label">Detection Accuracy</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-value">14<span>+</span></div>
+          <div class="stat-label">Diseases Detected</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-value">&lt;2<span>s</span></div>
+          <div class="stat-label">Scan Speed</div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <div class="scan-card">
+ 
+        <div class="mini-card mini-card-1">🌿 Healthy leaves: 72%</div>
+        <div class="mini-card mini-card-2">⚠️ Spread risk: High</div>
+        <div class="mini-card mini-card-3">💊 Treatment ready</div>
+ 
+        <div class="card-header">
+          <span class="card-title">AI Scan Result</span>
+          <div class="card-status">
+            <div class="status-dot"></div>
+            Live Analysis
+          </div>
+        </div>
+ 
+        <div class="tomato-scan">
+          <div class="scan-ring"></div>
+          <div class="scan-ring-2"></div>
+          <div class="bracket bracket-tl"></div>
+          <div class="bracket bracket-tr"></div>
+          <div class="bracket bracket-bl"></div>
+          <div class="bracket bracket-br"></div>
+          <span class="tomato-emoji">🍅</span>
+        </div>
+ 
+        <div class="detection-result">
+          <div class="result-label">Detected Disease</div>
+          <div class="result-disease">Early Blight (Alternaria solani)</div>
+          <div class="confidence-bar"><div class="confidence-fill"></div></div>
+          <div class="confidence-label">
+            <span>Confidence</span>
+            <span id="conf-val">94.7%</span>
+          </div>
+        </div>
+ 
+        <div class="ai-tags">
+          <span class="ai-tag tag-red">🦠 Fungal</span>
+          <span class="ai-tag tag-amber">⚡ Stage 2</span>
+          <span class="ai-tag tag-amber">🌡 High Spread</span>
+          <span class="ai-tag tag-green">💊 Treatable</span>
+        </div>
+ 
+        <button class="treat-btn">View Treatment Plan →</button>
+      </div>
+    </div>
+ 
+  </div>
+ 
+  <div class="slide-dots" id="dots">
+    <button class="dot active" data-i="0"></button>
+    <button class="dot" data-i="1"></button>
+    <button class="dot" data-i="2"></button>
+    <button class="dot" data-i="3"></button>
+  </div>
+ 
+</section>
+
 <div class="how-it-works">
   <h2>How It Works</h2>
   <div class="steps">
