@@ -6,6 +6,9 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 from werkzeug.utils import secure_filename
+from flask import render_template, request, flash, redirect, url_for
+from flask_mail import Message
+from . import mail  # import mail from your app factory
 import uuid
 import locale
 
@@ -125,8 +128,34 @@ def show_service_page():
 def about_page():
     return render_template('about.html')
 
-@main.route('/contacts')
+@main.route('/contacts', methods=['GET', 'POST'])
 def contacts_page():
+    if request.method == 'POST':
+        first_name = request.form.get('first_name', '').strip()
+        last_name  = request.form.get('last_name', '').strip()
+        email      = request.form.get('email', '').strip()
+        message    = request.form.get('message', '').strip()
+
+        # Basic validation
+        if not all([first_name, last_name, email, message]):
+            flash('Please fill in all fields.', 'danger')
+            return redirect(url_for('main.contacts_page'))
+
+        try:
+            msg = Message(
+                subject=f"New Contact Message from {first_name} {last_name}",
+                recipients=[current_app.config['CONTACT_MAIL_RECIPIENT']],
+                reply_to=email,
+                body=f"From: {first_name} {last_name} <{email}>\n\n{message}"
+            )
+            mail.send(msg)
+            flash('Your message was sent successfully!', 'success')
+        except Exception as e:
+            flash(f'Failed to send message. Please try again later.', 'danger')
+            current_app.logger.error(f"Mail error: {e}")
+
+        return redirect(url_for('main.contacts_page'))
+
     return render_template('contact.html')
 
 @main.route('/predict', methods=['POST'])
