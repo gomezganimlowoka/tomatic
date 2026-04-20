@@ -839,6 +839,7 @@ body.dark-mode {
  
 .tomato-emoji {
   font-size: 5.5rem;
+  width: 1em;
   line-height: 1;
   text-align: center;
   filter: drop-shadow(0 8px 20px rgba(229,57,53,0.25));
