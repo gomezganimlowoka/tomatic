@@ -1066,3 +1066,209 @@ body.dark-mode {
   .btn { width: 100%; text-align: center; }
   .custum-file-upload { padding: 28px 16px; }
 }
+
+/* about page */
+.content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 1rem 4rem;
+    }
+ 
+    /* Hero */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #EAF3DE;
+      color: #3B6D11;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .leaf-dot {
+      width: 8px;
+      height: 8px;
+      background: #639922;
+      border-radius: 50%;
+    }
+ 
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .hero-title span { color: #3B6D11; }
+ 
+    .hero-sub {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.8;
+      max-width: 580px;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+ 
+    /* Divider */
+    .divider {
+      width: 100%;
+      border: none;
+      border-top: 1px solid #e2e8d8;
+      margin: 2rem 0;
+    }
+ 
+    /* Section label */
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      color: #639922;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+ 
+    /* Feature cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+ 
+    .feat-card {
+      background: #fff;
+      border: 1px solid #e2e8d8;
+      border-radius: 14px;
+      padding: 1.2rem 1.3rem;
+    }
+ 
+    .feat-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-bottom: 0.8rem;
+    }
+    .feat-icon.green { background: #EAF3DE; }
+    .feat-icon.amber { background: #FAEEDA; }
+    .feat-icon.blue  { background: #E6F1FB; }
+ 
+    .feat-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 5px;
+    }
+    .feat-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.65;
+    }
+ 
+    /* How it works */
+    .how-steps {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    .step-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid #e2e8d8;
+    }
+    .step-row:last-child { border-bottom: none; }
+ 
+    .step-num {
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #EAF3DE;
+      color: #3B6D11;
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+ 
+    .step-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 3px;
+    }
+    .step-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.65;
+    }
+ 
+    /* Diseases */
+    .diseases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 8px;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+ 
+    .disease-pill {
+      background: #f4f6f0;
+      border: 1px solid #e2e8d8;
+      border-radius: 9px;
+      padding: 9px 13px;
+      font-size: 13px;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .disease-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #639922;
+      flex-shrink: 0;
+    }
+ 
+    /* Mission */
+    .mission-box {
+      width: 100%;
+      background: #EAF3DE;
+      border-radius: 14px;
+      padding: 1.5rem 1.8rem;
+    }
+    .mission-text {
+      font-size: 15px;
+      color: #27500A;
+      line-height: 1.8;
+    }
+    .mission-text strong {
+      color: #173404;
+      font-weight: 500;
+    }
+ 
+    /* Responsive */
+    @media (max-width: 600px) {
+      .content-container { width: 95%; padding: 2rem 0.75rem; }
+      .hero-title { font-size: 2rem; }
+    }
