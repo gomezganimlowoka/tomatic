@@ -5,23 +5,104 @@
 {% block content%}
 <h2 style="text-align: center; margin-top: 20px;">About Us</h2>
 
-    <main style="display: flex; flex-direction: column; align-items: center; width:80%" class="content-container">
-      <section style="display: flex; flex-direction: column; align-items: center;" class="card" >
-        <p>
-          The <strong>Tomatoic</strong> is an AI-powered web
-          application designed to help farmers and gardeners identify common
-          diseases affecting tomato plants by analyzing leaf images.
-        </p>
-        <p >
-          Using a trained deep learning model, the application predicts the type
-          of disease present on the leaf and provides information about the
-          cause and prevention methods to help users take timely action.
-        </p>
-        <p >
-          This tool aims to improve crop health and yield by enabling early
-          detection and management of tomato leaf diseases.
-        </p>
-      </section>
-    </main>
+    <main class="content-container">
+ 
+    <!-- Hero -->
+    <div class="hero-badge">
+      <div class="leaf-dot"></div>
+      AI-powered plant health
+    </div>
+    <h1 class="hero-title">Meet <span>Tomatoic</span></h1>
+    <p class="hero-sub">
+      An intelligent diagnostic tool that helps farmers and gardeners detect tomato leaf diseases early —
+      before they spread and damage your harvest. Upload a photo, get instant results.
+    </p>
+ 
+    <hr class="divider"/>
+ 
+    <!-- Features -->
+    <p class="section-label">What we offer</p>
+    <div class="card-grid">
+      <div class="feat-card">
+        <div class="feat-icon green">🔬</div>
+        <div class="feat-title">Instant diagnosis</div>
+        <div class="feat-desc">Upload a leaf image and receive a disease prediction within seconds using a trained deep learning model.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon amber">📋</div>
+        <div class="feat-title">Cause &amp; context</div>
+        <div class="feat-desc">Understand what triggered the disease — fungal, bacterial, viral, or environmental — with clear explanations.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon blue">🛡️</div>
+        <div class="feat-title">Prevention tips</div>
+        <div class="feat-desc">Get actionable guidance on treatments and prevention methods to protect your crop and stop further spread.</div>
+      </div>
+    </div>
+ 
+    <hr class="divider"/>
+ 
+    <!-- How it works -->
+    <p class="section-label">How it works</p>
+    <div class="how-steps">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Capture a leaf image</div>
+          <div class="step-desc">Take a clear, close-up photo of the affected tomato leaf using your phone or camera.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Upload to Tomatoic</div>
+          <div class="step-desc">Submit the image through the app — no account required, just drag, drop, and go.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">AI analyzes the leaf</div>
+          <div class="step-desc">Our deep learning model scans the image for visual patterns associated with known tomato diseases.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">Get your diagnosis</div>
+          <div class="step-desc">Receive the disease name, severity indication, likely causes, and recommended treatment steps immediately.</div>
+        </div>
+      </div>
+    </div>
+ 
+    <hr class="divider"/>
+ 
+    <!-- Diseases -->
+    <p class="section-label">Diseases we detect</p>
+    <div class="diseases-grid">
+      <div class="disease-pill"><div class="disease-dot"></div>Early Blight</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Late Blight</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Leaf Mold</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Septoria Leaf Spot</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Spider Mites</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Target Spot</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Mosaic Virus</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Yellow Leaf Curl</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Bacterial Spot</div>
+      <div class="disease-pill"><div class="disease-dot"></div>Healthy Leaf ✓</div>
+    </div>
+ 
+    <hr class="divider"/>
+ 
+    <!-- Mission -->
+    <div class="mission-box">
+      <p class="mission-text">
+        <strong>Our mission</strong> is to put the power of AI in the hands of every farmer —
+        from smallholder growers to large-scale producers. By enabling early detection of tomato diseases,
+        Tomatoic helps reduce crop loss, lower pesticide overuse, and protect livelihoods that depend on a healthy harvest.
+      </p>
+    </div>
+ 
+  </main>
      {%endblock%}
 </html>
