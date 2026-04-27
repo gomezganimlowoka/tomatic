@@ -1,8 +1,8 @@
 function sendEmail() {
     const templateParams = {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
-        message: document.getElementById("message").value
+        from_name: document.getElementById("fn1").value,
+        from_email: document.getElementById("em1").value,
+        message: document.getElementById("ms").value
     };
     emailjs.send('service_9h8v9qj', 'template_1l7z5s8', templateParams)
         .then(function(response) {
