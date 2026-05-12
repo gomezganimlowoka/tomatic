@@ -1,6 +1,6 @@
 function sendEmail() {
     const templateParams = {
-        from_name: document.getElementById("fn1").value + " " + document.getElementById("ln1").value,
+        from_name: document.getElementById("fn1").value,
         from_email: document.getElementById("em1").value,
         message: document.getElementById("msg1").value  
     };
