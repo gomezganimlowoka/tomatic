@@ -1,15 +1,6 @@
 {%extends "base.html"%} 
 {%block title%}Contact{%endblock%} 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "SWFv1A1upOkictPvl",
-      });
-   })();
-</script>
+
 {%block content%}
 <div class="contact_form">
   <div class="card border-0 shadow-sm p-4 form-v1" style="max-width: 520px; border-radius: 14px">
@@ -52,7 +43,5 @@
   </form>
 </div>
 </div>
-
-<script type="text/javascript" src = 'url_for("static", filename="js/sendEmail.js")'></script>
 
 {%endblock%}
