@@ -5,15 +5,6 @@
 <div class="contact_form">
   <div class="card border-0 shadow-sm p-4 form-v1" style="max-width: 520px; border-radius: 14px">
 
-    <!-- Flash messages -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    {% for category, message in messages %}
-    <div class="alert alert-{{ category }} mb-3">{{ message }}</div>
-    {% endfor %}
-    {% endif %}
-    {% endwith %}
-
     <form method="POST"">
       {{ csrf_token() if csrf }}  {# include if using Flask-WTF CSRF #}
 
@@ -38,6 +29,10 @@
       required></textarea>
     <label for="msg1">Message</label>
   </div>
+
+  <div id="success-msg" class="alert alert-success d-none mb-3">Message sent successfully!</div>
+  <div id="error-msg" class="alert alert-danger d-none mb-3">Failed to send message. Please try again later.</div>
+
 
   <button type="submit" class="btn-send">Send message</button>
   </form>
