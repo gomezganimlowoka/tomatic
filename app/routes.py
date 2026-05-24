@@ -130,31 +130,31 @@ def about_page():
 
 @main.route('/contacts', methods=['GET', 'POST'])
 def contacts_page():
-    if request.method == 'POST':
-        first_name = request.form.get('first_name', '').strip()
-        last_name  = request.form.get('last_name', '').strip()
-        email      = request.form.get('email', '').strip()
-        message    = request.form.get('message', '').strip()
+    # if request.method == 'POST':
+    #     first_name = request.form.get('first_name', '').strip()
+    #     last_name  = request.form.get('last_name', '').strip()
+    #     email      = request.form.get('email', '').strip()
+    #     message    = request.form.get('message', '').strip()
 
-        # Basic validation
-        if not all([first_name, last_name, email, message]):
-            flash('Please fill in all fields.', 'danger')
-            return redirect(url_for('main.contacts_page'))
+    #     # Basic validation
+    #     if not all([first_name, last_name, email, message]):
+    #         flash('Please fill in all fields.', 'danger')
+    #         return redirect(url_for('main.contacts_page'))
 
-        try:
-            msg = Message(
-                subject=f"New Contact Message from {first_name} {last_name}",
-                recipients=[current_app.config['CONTACT_MAIL_RECIPIENT']],
-                reply_to=email,
-                body=f"From: {first_name} {last_name} <{email}>\n\n{message}"
-            )
-            mail.send(msg)
-            flash('Your message was sent successfully!', 'success')
-        except Exception as e:
-            flash(f'Failed to send message. Please try again later.', 'danger')
-            current_app.logger.error(f"Mail error: {e}")
+    #     try:
+    #         msg = Message(
+    #             subject=f"New Contact Message from {first_name} {last_name}",
+    #             recipients=[current_app.config['CONTACT_MAIL_RECIPIENT']],
+    #             reply_to=email,
+    #             body=f"From: {first_name} {last_name} <{email}>\n\n{message}"
+    #         )
+    #         mail.send(msg)
+    #         flash('Your message was sent successfully!', 'success')
+    #     except Exception as e:
+    #         flash(f'Failed to send message. Please try again later.', 'danger')
+    #         current_app.logger.error(f"Mail error: {e}")
 
-        return redirect(url_for('main.contacts_page'))
+    #     return redirect(url_for('main.contacts_page'))
 
     return render_template('contact.html')
 
