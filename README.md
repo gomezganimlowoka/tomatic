@@ -1,4 +1,4 @@
-# 🍅 Tomatic — Tomato Disease Detection Web App
+# Tomatic — Tomato Disease Detection Web App
 
 Tomatic is a Flask-based web application that uses machine learning to detect diseases in tomato plants. Users can upload an image of a tomato leaf, and the app predicts whether the plant is healthy or affected by a disease.
 
